@@ -1,8 +1,8 @@
 'use strict'
 
-function 找出最长公子串 (...arrayOfStrings) {
+function 找出最长公子串 (...strings) {
     let arraiesOfSubStrings = []
-    arrayOfStrings.reduce((accumulator, currentValue) => {
+    strings.reduce((accumulator, currentValue) => {
         arraiesOfSubStrings.push(findAllSubStringsFromTwoString(accumulator, currentValue))
         return accumulator
     })
