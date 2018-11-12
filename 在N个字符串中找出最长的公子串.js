@@ -50,8 +50,8 @@ function findAllSubStringsFromTwoString (string1, string2) {
     return subStrings
 }
 
-function findTheLongest (arrayOfStrings) {
-    return arrayOfStrings.reduce((accumulator, currentValue) => findTheLonger(accumulator, currentValue), '')
+function findTheLongest (strings) {
+    return strings.reduce((accumulator, currentValue) => findTheLonger(accumulator, currentValue), '')
 
     function findTheLonger (string1, string2) {
         return (string1.length > string2.length) ? (string1) : (string2)
