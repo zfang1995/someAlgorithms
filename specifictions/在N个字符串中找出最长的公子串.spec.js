@@ -1,4 +1,4 @@
-let app = require('../src/在N个字符串中找出最长的公子串'),
+let app = require('../algorithms/在N个字符串中找出最长的公子串'),
     assert = require('chai').assert
 
 describe('app', function () {

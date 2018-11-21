@@ -1,2 +1,2 @@
 # someAlgorithms
-javascript implements for some algorithms written by me.
+javascript implemention for some algorithms written by zfang1995.

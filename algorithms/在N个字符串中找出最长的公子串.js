@@ -1,12 +1,16 @@
 'use strict'
 
 module.exports = function 找出最长公子串 (...strings) {
-    let setsOfSubstrings = []
-    strings.reduce((accumulator, currentValue) => {
-        setsOfSubstrings.push( findAllSubStringsFromTwoString( accumulator, currentValue))
-        return accumulator
-    })
-    return getTheLongestString( getIntersection( ...setsOfSubstrings))
+    /**
+     * find-the-longest-common-substring-from-given-strings
+     *
+     * @param {array} strings :a list of strings
+     * @returns {string} the longest common substring.
+     */
+    return getTheLongestString( getIntersection( ...strings.reduce((setsOfSubstrings, currentValue, currentIndex, array) => {
+        if (currentIndex !== 0) setsOfSubstrings.push( findAllSubStringsFromTwoString( array[currentIndex - 1], currentValue))
+        return setsOfSubstrings
+    }, [])))
 }
 
 function getIntersection (...sets) {
