@@ -1,11 +1,11 @@
 'use strict'
 
-module.exports = function 找出最长公子串 (...strings) {
+export default function 找出最长公子串 (...strings) {
     /**
      * find-the-longest-common-substring-from-given-strings
      *
      * @param {array} strings :a list of strings
-     * @returns {string} the longest common substring.
+     * @returns {string} :the longest common substring.
      */
     return getTheLongestString( getIntersection( ...strings.reduce((setsOfSubstrings, currentValue, currentIndex, array) => {
         if (currentIndex !== 0) setsOfSubstrings.push( findAllSubStringsFromTwoString( array[currentIndex - 1], currentValue))
@@ -18,7 +18,7 @@ function getIntersection (...sets) {
      *
      *
      * @param {array} sets :a list of sets
-     * @returns {array} the elements of the intersection of given sets.
+     * @returns {array} :the elements of the intersection of given sets.
      */
     return sets.reduce((accumulator, currentValue) => [...accumulator].filter(value => currentValue.has(value)))
 }
