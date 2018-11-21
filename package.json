@@ -1,0 +1,18 @@
+{
+  "name": "some-algorithms",
+  "version": "1.0.0",
+  "description": "javascript implemention for some algorithms written by zfang1995",
+  "main": "index.js",
+  "repository": "git@github.com:zfang1995/someAlgorithms.git",
+  "author": "zfang <747320213@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack"
+  }
+}
